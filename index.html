@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQVpoQl_Qs9sX8mElHOOvWKK5_n8HKDFw"></script>
+    <script src="mycode.js"></script>
+
+    <style>
+
+        #map-page, #map-canvas { width: 100%; height: 100%; padding: 0; }
+
+    </style>
+</head>
+
+<body>
+<div data-role="page" id="home">
+    <div data-role="header">
+        <h1>The closest restaurants to me</h1>
+        <a id="refresh" href="#" data-icon="recycle" class="ui-btn-right">Refresh</a>
+    </div>
+    <div data-role="content">
+        <ul id="stations_list" data-role="listview">
+
+        </ul>
+    </div>
+</div>
+
+
+<div data-role="page" id="details">
+    <div data-role="header" data-add-back-btn="true">
+        <h1>Restaurant details</h1>
+        <a id="map_btn" href="#" data-icon="location" class="ui-btn-right">Map</a>
+    </div>
+    <div data-role="content">
+        <img id="stationIcon" />
+        <h4 id="stationName"></h4>
+        <ul data-role="listview" data-inset="true">
+            <li><span id="Rating"></span></li>
+            <li><span id="Vecinity"></span></li>
+        </ul>
+
+    </div>
+
+</div>
+
+<div data-role="page" id="map-page" data-url="map-page" >
+        <div data-role="header" data-theme="a" data-add-back-btn="true">
+        <h1>Maps</h1>
+
+        </div>
+
+        <div role="main" class="ui-content" id="map-canvas" >
+            <!-- map loads here... -->
+        </div>
+</div>
+
+</body>
+
+
+</html>
